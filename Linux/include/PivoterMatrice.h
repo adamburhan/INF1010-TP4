@@ -1,8 +1,10 @@
-/*
- * Titre : PivoterMatrice.h - Travail Pratique #4 - Programmation Orient�e Objet
- * Date : 27 F�vrier 2020
- * Auteur : Nabil Dabouz
- */
+/****************************************************************************
+ * Fichier: PivoterMatrice.h
+ * Auteurs: Adam Burhan et Jean-Sébastien Dulong-Grégoire
+ * Date: 31 mars 2020
+ * Mise a jour : 
+ * Description: Déclaratione et implémentation de la classe PivoterMatrice
+ ****************************************************************************/
 
 #ifndef PIVOTER_MATRICE_H
 #define PIVOTER_MATRICE_H
@@ -29,11 +31,15 @@ private:
  */
 template <class M> inline PivoterMatrice<M>::PivoterMatrice() : matrice_(nullptr)
 {}
+
+
 /**
  * @brief constructeur par paramètre de la classe
  */
 template <class M>
 inline PivoterMatrice<M>::PivoterMatrice(M *matrice) : matrice_(matrice) {}
+
+
 /**
  * @brief trouver les coordonnées du point par rapport au centre de la matrice
  * @param coords les coordonnées du point originales
@@ -46,6 +52,8 @@ PivoterMatrice<M>::changerCoordonneesCentreMatrice(Coordonnees coords) const {
 	newCoords.y = coords.y - (int)((matrice_->getHeight())/2);
 	return newCoords;
 }
+
+
 /**
  * @brief revenir au système précédent, trouver les coordonnées du point par
  * rapport au premier élément de la matrice
@@ -60,6 +68,9 @@ PivoterMatrice<M>::recupererCoordonnees(Coordonnees coords) const {
   	return newCoords;
 }
 
+
+//! Méthode effectuant le pivot de l'objet matrice_ de la classe PivoterMatrice
+//! \param direction            Direction dans laquelle la matrice sera pivotée
 template <class M>
 inline void
 PivoterMatrice<M>::pivoterMatrice(Direction direction)

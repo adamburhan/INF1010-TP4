@@ -1,8 +1,10 @@
-/*
- * Titre : Pixel.h - Travail Pratique #4 - Programmation Orient�e Objet
- * Date : 27 F�vrier 2020
- * Auteur : Nabil Dabouz
- */
+/****************************************************************************
+ * Fichier: Pixel.h
+ * Auteurs: Adam Burhan et Jean-Sébastien Dulong-Grégoire
+ * Date: 31 mars 2020
+ * Mise a jour : 
+ * Description: Déclaration de la classe Pixel
+ ****************************************************************************/
 
 #ifndef PIXEL_H
 #define PIXEL_H
